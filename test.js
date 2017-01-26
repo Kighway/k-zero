@@ -12,7 +12,7 @@ var sine = [150,151,152,153,154,155,156,157,158,158,159,160,161,162,163,164,165,
 
 var i = 0
 
-var graphSine = setInterval(graphOneSine, 1)
+var graphSine = setInterval(graphOneSine, 0.0001)
 
 function stopGraph() {
   clearInterval(graphSine)

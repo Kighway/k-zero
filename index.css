@@ -1,27 +1,29 @@
-#racer {
-  background-color: white;
+#ship {
+  background-color: black;
   height: 80px;
   position: absolute;
-  width: 30px;
+  width: 68px;
 }
 
 img {
     border-radius: 8px;
 }
 
-#game {
-  background-image: url('grass.jpg');
+#view {
+  background-image: url('star-backdrop.gif');
   height: 750px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
   text-align: center;
   width: 400px;
+  rotation-point:50% 50%;
+  rotation:180deg;
 }
 
-.road {
+.wormhole {
   width: 120px;
   height: 3px;
-  background: black;
+  background: purple;
   position: absolute;
 }
