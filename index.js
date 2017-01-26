@@ -1,7 +1,7 @@
 const YAXIS = 750
 // const DODGER = document.getElementById('dodger')
 const VIEW = document.getElementById('view')
-const WORMHOLEPULSE = []
+const WORMHOLEPULSES = []
 
 document.addEventListener('keydown', function(event) {
   if (event.which === 37) {
