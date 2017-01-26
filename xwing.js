@@ -39,7 +39,7 @@ function wormholePulse(leftPoint) {
   function wormHoleFluctuation() {
     wormhole.style.top = `${top += 6}px`;
 
-    if (!breachWormhole(wormhole)) {
+    if (breachWormhole(wormhole)) {
       return stopGraph()
     }
 
@@ -82,7 +82,7 @@ function turnRight() {
   var leftNumbers = xwing.style.left.replace('px', '')
   var left = parseInt(leftNumbers)
 
-  if (left < 390) {
+  if (left < 330) {
     xwing.style.left = `${left + 30}px`
   }
 }
