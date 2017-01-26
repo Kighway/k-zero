@@ -10,7 +10,7 @@ img {
 }
 
 #game {
-  background-color: #111;
+  background-image: url('grass.jpg');
   height: 750px;
   margin: 0 auto;
   overflow: hidden;
@@ -19,9 +19,9 @@ img {
   width: 400px;
 }
 
-#racer {
-  background-color: white;
-  height: 20px;
+.road {
+  width: 60px;
+  height: 3px;
+  background: black;
   position: absolute;
-  width: 10px;
 }
