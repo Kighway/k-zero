@@ -1,0 +1,27 @@
+#racer {
+  background-color: white;
+  height: 20px;
+  position: absolute;
+  width: 10px;
+}
+
+img {
+    border-radius: 8px;
+}
+
+#game {
+  background-color: #111;
+  height: 750px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 400px;
+}
+
+#racer {
+  background-color: white;
+  height: 20px;
+  position: absolute;
+  width: 10px;
+}
