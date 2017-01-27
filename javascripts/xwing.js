@@ -26,13 +26,13 @@ function breachWormhole(wormhole) {
     ) {
          currentBreach = (new Date()).getTime()
          breachInterval = currentBreach - lastBreach
-        if (breachInterval > 18)
+        if (breachInterval > 35)
         {
           return true
         }
       lastBreach = currentBreach
       }
-      if (breachInterval > 18)
+      if (breachInterval > 35)
       {
         return true
       }
@@ -68,12 +68,10 @@ function wormholePulse(leftPoint) {
   window.requestAnimationFrame(wormHoleFluctuation)
 
   WORMHOLEPULSES.push(wormhole)
-//
-// // return wormhole
 
 }
 
-function moveXWing() {
+function moveXWing () {
   document.addEventListener('keydown', function(event) {
     if (event.which === 37) {
       event.preventDefault()
@@ -86,23 +84,35 @@ function moveXWing() {
       turnRight()
     }
   })
-}
+  function turnLeft() {
+    var leftNumbers = xwing.style.left.replace('px', '')
+    var left = parseInt(leftNumbers)
+    if (left > 0) {
+      xwing.style.left = `${left - 5}px`
+    }
+  }
 
-function turnLeft() {
-  var leftNumbers = xwing.style.left.replace('px', '')
-  var left = parseInt(leftNumbers)
-  if (left > 0) {
-    xwing.style.left = `${left - 30}px`
+  function turnRight() {
+    var leftNumbers = xwing.style.left.replace('px', '')
+    var left = parseInt(leftNumbers)
+
+    if (left < 330) {
+      xwing.style.left = `${left + 5}px`
+    }
   }
 }
 
-function turnRight() {
-  var leftNumbers = xwing.style.left.replace('px', '')
-  var left = parseInt(leftNumbers)
 
-  if (left < 330) {
-    xwing.style.left = `${left + 30}px`
-  }
+
+
+
+
+function start() {
+  document.addEventListener('keydown', moveXWing)
+  $("#starwars").remove()
+
+  moveXWing()
+
+  graphSine = setInterval(graphOneSine, 0.0001)
+
 }
-
-moveXWing()
