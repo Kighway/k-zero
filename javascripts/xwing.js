@@ -75,18 +75,20 @@ function wormholePulse(leftPoint) {
 
 }
 
-document.addEventListener('keydown', function(event) {
-  if (event.which === 37) {
-    event.preventDefault()
-    event.stopPropagation()
-    turnLeft()
-  }
-  else if (event.which === 39) {
-    event.preventDefault()
-    event.stopPropagation()
-    turnRight()
-  }
-})
+function moveXWing() {
+  document.addEventListener('keydown', function(event) {
+    if (event.which === 37) {
+      event.preventDefault()
+      event.stopPropagation()
+      turnLeft()
+    }
+    else if (event.which === 39) {
+      event.preventDefault()
+      event.stopPropagation()
+      turnRight()
+    }
+  })
+}
 
 function turnLeft() {
   var leftNumbers = xwing.style.left.replace('px', '')
@@ -104,3 +106,5 @@ function turnRight() {
     xwing.style.left = `${left + 30}px`
   }
 }
+
+moveXWing()
