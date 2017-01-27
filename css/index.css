@@ -28,3 +28,10 @@ img {
   background-image: url("../images/wormholepulse-200-20.jpg");
   position: absolute;
 }
+
+#timer {
+  text-align: center;
+  color: white;
+  background-color: black;
+  z-index: 10;
+}
