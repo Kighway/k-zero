@@ -26,16 +26,14 @@ function breachWormhole(wormhole) {
     ) {
          currentBreach = (new Date()).getTime()
          breachInterval = currentBreach - lastBreach
-        if (breachInterval > 20)
+        if (breachInterval > 18)
         {
-          debugger
           return true
         }
       lastBreach = currentBreach
       }
-      if (breachInterval > 20)
+      if (breachInterval > 18)
       {
-        debugger
         return true
       }
   }
@@ -69,7 +67,7 @@ function wormholePulse(leftPoint) {
   }
   window.requestAnimationFrame(wormHoleFluctuation)
 
-//   WORMHOLEPULSES.push(wormhole)
+  WORMHOLEPULSES.push(wormhole)
 //
 // // return wormhole
 
