@@ -3,6 +3,10 @@ const XWING = document.getElementById('xwing')
 const VIEW = document.getElementById('view')
 const WORMHOLEPULSES = []
 
+ breachInterval = 0
+ currentBreach = 0
+ lastBreach = 0
+
 function breachWormhole(wormhole) {
   const top = positionToInteger(wormhole.style.top)
   if (top > 620) {
@@ -11,14 +15,29 @@ function breachWormhole(wormhole) {
     const wormholeLeftEdge = positionToInteger(wormhole.style.left)
     const wormholeRightEdge = wormholeLeftEdge + 200;
 
+    if (lastBreach === 0) {
+      lastBreach = (new Date()).getTime()
+    }
+
     if (
       (wormholeLeftEdge <= leftWing && wormholeRightEdge >= leftWing) ||
       (wormholeLeftEdge >= leftWing && wormholeRightEdge <= rightWing) ||
       (wormholeLeftEdge <= rightWing && wormholeRightEdge >= rightWing)
     ) {
-      return true
-    }
-
+         currentBreach = (new Date()).getTime()
+         breachInterval = currentBreach - lastBreach
+        if (breachInterval > 20)
+        {
+          debugger
+          return true
+        }
+      lastBreach = currentBreach
+      }
+      if (breachInterval > 20)
+      {
+        debugger
+        return true
+      }
   }
 }
 
@@ -39,10 +58,9 @@ function wormholePulse(leftPoint) {
   function wormHoleFluctuation() {
     wormhole.style.top = `${top += 6}px`;
 
-    if (!breachWormhole(wormhole)) {
+    if (breachWormhole(wormhole)) {
       return stopGraph()
     }
-
     if (top < YAXIS) {
       window.requestAnimationFrame(wormHoleFluctuation)
     } else {
@@ -51,9 +69,9 @@ function wormholePulse(leftPoint) {
   }
   window.requestAnimationFrame(wormHoleFluctuation)
 
-  WORMHOLEPULSES.push(wormhole)
-
-// return wormhole
+//   WORMHOLEPULSES.push(wormhole)
+//
+// // return wormhole
 
 }
 
@@ -82,7 +100,7 @@ function turnRight() {
   var leftNumbers = xwing.style.left.replace('px', '')
   var left = parseInt(leftNumbers)
 
-  if (left < 390) {
+  if (left < 330) {
     xwing.style.left = `${left + 30}px`
   }
 }

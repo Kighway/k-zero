@@ -11,7 +11,7 @@ img {
 }
 
 #view {
-  background-image: url('star-backdrop.gif');
+  background-image: url("../images/star-backdrop.gif");
   height: 750px;
   margin: 0 auto;
   overflow: hidden;
@@ -25,6 +25,6 @@ img {
 .wormhole {
   width: 200px;
   height: 20px;
-  background-image: url('wormholepulse-200-20.jpg');
+  background-image: url("../images/wormholepulse-200-20.jpg");
   position: absolute;
 }
