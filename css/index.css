@@ -6,6 +6,14 @@
   z-index: 1;
 }
 
+#explosion {
+  background-color: black;
+  height: 80px;
+  position: absolute;
+  width: 68px;
+  z-index: 1;
+}
+
 img {
     border-radius: 8px;
 }
@@ -29,9 +37,18 @@ img {
   position: absolute;
 }
 
+
 #timer {
   text-align: center;
   color: white;
   background-color: black;
   z-index: 10;
+
+#starwars {
+  color: yellow;
+  font-size: 4rem;
+  position: relative;
+  text-decoration: none;
+  top: 4rem;
+
 }
