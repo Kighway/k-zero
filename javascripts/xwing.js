@@ -27,25 +27,17 @@ function breachWormhole(wormhole) {
     ) {
          currentBreach = (new Date()).getTime()
          breachInterval = currentBreach - lastBreach
-<<<<<<< HEAD
-        if (breachInterval > 34)
-=======
 
         if (breachInterval > 34)
 
->>>>>>> 620101ce7e7ca048bec18ec0f5d6e824bb579f7d
         {
           return true
         }
       lastBreach = currentBreach
       }
-<<<<<<< HEAD
-      if (breachInterval > 34)
-=======
 
       if (breachInterval > 34)
 
->>>>>>> 620101ce7e7ca048bec18ec0f5d6e824bb579f7d
       {
         return true
       }
@@ -128,5 +120,7 @@ function start() {
   moveXWing()
 
   graphSine = setInterval(graphOneSine, 0.0001)
+
+  counter = setInterval(timer, 1000)
 
 }
