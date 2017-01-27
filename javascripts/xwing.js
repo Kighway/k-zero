@@ -57,7 +57,7 @@ function wormholePulse(leftPoint) {
     wormhole.style.top = `${top += 6}px`;
 
     if (breachWormhole(wormhole)) {
-      return stopGraph()
+      return endGame()
     }
     if (top < YAXIS) {
       window.requestAnimationFrame(wormHoleFluctuation)

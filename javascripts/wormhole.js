@@ -2,10 +2,10 @@ var i = 0
 
 var graphSine = setInterval(graphOneSine, 0.0001)
 
-function stopGraph() {
+function endGame() {
   clearInterval(graphSine)
   $("#view").children().remove()
-  // debugger
+  $("#view").css('background-image', 'url(./images/vader.jpg)')
 }
 
 ////function = make new sine piece
