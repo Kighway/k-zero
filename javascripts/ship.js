@@ -121,4 +121,6 @@ function start() {
 
   graphSine = setInterval(graphOneSine, 0.0001)
 
+  counter = setInterval(timer, 1000)
+
 }

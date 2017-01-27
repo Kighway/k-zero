@@ -3,6 +3,7 @@ var i = 0
 // var graphSine = setInterval(graphOneSine, 0.0001)
 
 function endGame() {
+  clearInterval(counter)
   clearInterval(graphSine)
   var explosion = `<img id="explosion" src="images/explosion.gif" style="bottom: 30px; left: ${$("#ship").css("left")};">`
   $("#ship").remove()
