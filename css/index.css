@@ -37,10 +37,18 @@ img {
   position: absolute;
 }
 
+
+#timer {
+  text-align: center;
+  color: white;
+  background-color: black;
+  z-index: 10;
+
 #starwars {
   color: yellow;
   font-size: 4rem;
   position: relative;
   text-decoration: none;
   top: 4rem;
+
 }
