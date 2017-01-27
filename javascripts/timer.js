@@ -1,7 +1,5 @@
 var count = 0;
 
-// var counter = setInterval(timer, 1000)
-
 function timer() {
   count++
 
@@ -16,13 +14,10 @@ var secondsString = seconds.toString()
 if (secondsString.length === 1){
   secondsString = "0" + secondsString
 }
-
-debugger
-
-
   if (gameOver)
   {
      clearInterval(counter)
      return
   }
   document.getElementById("timer").innerHTML = minutesString + ":" + secondsString
+}

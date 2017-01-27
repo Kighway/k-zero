@@ -1,7 +1,5 @@
 var i = 0
 
-// var graphSine = setInterval(graphOneSine, 0.0001)
-
 function endGame() {
   clearInterval(counter)
   clearInterval(graphSine)
@@ -10,12 +8,8 @@ function endGame() {
   $("#view").append(explosion)
   setInterval( () => { $("#view").children().remove() } , 250)
   setInterval(() => { $("#view").css('background-image', 'url(./images/vader.jpg)') }, 200)
-
-
-
 }
 
-////function = make new sine piece
 function graphOneSine () {
     wormholePulse(SINE[i++])
     if (i  === SINE.length - 1) {

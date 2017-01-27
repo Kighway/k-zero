@@ -108,11 +108,6 @@ function moveShip () {
   }
 }
 
-
-
-
-
-
 function start() {
   document.addEventListener('keydown', moveShip)
   $("#starwars").remove()
