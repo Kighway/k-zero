@@ -1,5 +1,5 @@
 const YAXIS = 750
-const XWING = document.getElementById('xwing')
+const SHIP = document.getElementById('ship')
 const VIEW = document.getElementById('view')
 const WORMHOLEPULSES = []
 
@@ -11,7 +11,7 @@ const WORMHOLEPULSES = []
 function breachWormhole(wormhole) {
   const top = positionToInteger(wormhole.style.top)
   if (top > 620) {
-    const leftWing = positionToInteger(XWING.style.left)
+    const leftWing = positionToInteger(SHIP.style.left)
     const rightWing = leftWing + 68;
     const wormholeLeftEdge = positionToInteger(wormhole.style.left)
     const wormholeRightEdge = wormholeLeftEdge + 200;
@@ -27,25 +27,17 @@ function breachWormhole(wormhole) {
     ) {
          currentBreach = (new Date()).getTime()
          breachInterval = currentBreach - lastBreach
-<<<<<<< HEAD
-        if (breachInterval > 34)
-=======
 
         if (breachInterval > 34)
 
->>>>>>> 620101ce7e7ca048bec18ec0f5d6e824bb579f7d
         {
           return true
         }
       lastBreach = currentBreach
       }
-<<<<<<< HEAD
-      if (breachInterval > 34)
-=======
 
       if (breachInterval > 34)
 
->>>>>>> 620101ce7e7ca048bec18ec0f5d6e824bb579f7d
       {
         return true
       }
@@ -85,7 +77,7 @@ function wormholePulse(leftPoint) {
 
 }
 
-function moveXWing () {
+function moveShip () {
   document.addEventListener('keydown', function(event) {
     if (event.which === 37) {
       event.preventDefault()
@@ -99,19 +91,19 @@ function moveXWing () {
     }
   })
   function turnLeft() {
-    var leftNumbers = xwing.style.left.replace('px', '')
+    var leftNumbers = ship.style.left.replace('px', '')
     var left = parseInt(leftNumbers)
     if (left > 0) {
-      xwing.style.left = `${left - 5}px`
+      ship.style.left = `${left - 2}px`
     }
   }
 
   function turnRight() {
-    var leftNumbers = xwing.style.left.replace('px', '')
+    var leftNumbers = ship.style.left.replace('px', '')
     var left = parseInt(leftNumbers)
 
     if (left < 330) {
-      xwing.style.left = `${left + 5}px`
+      ship.style.left = `${left + 2}px`
     }
   }
 }
@@ -122,10 +114,10 @@ function moveXWing () {
 
 
 function start() {
-  document.addEventListener('keydown', moveXWing)
+  document.addEventListener('keydown', moveShip)
   $("#starwars").remove()
 
-  moveXWing()
+  moveShip()
 
   graphSine = setInterval(graphOneSine, 0.0001)
 

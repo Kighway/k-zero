@@ -1,9 +1,16 @@
-#xwing {
+#ship {
   background-color: black;
   height: 80px;
   position: absolute;
   width: 68px;
   z-index: 1;
+}
+
+body {
+    background-image: url("../images/endor-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  background-position: center center;
 }
 
 #explosion {
@@ -43,6 +50,7 @@ img {
   color: white;
   background-color: black;
   z-index: 10;
+}
 
 #starwars {
   color: yellow;

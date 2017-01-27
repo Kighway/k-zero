@@ -4,8 +4,8 @@ var i = 0
 
 function endGame() {
   clearInterval(graphSine)
-  var explosion = `<img id="explosion" src="images/explosion.gif" style="bottom: 30px; left: ${xwing.style.left};">`
-  $("#xwing").remove()
+  var explosion = `<img id="explosion" src="images/explosion.gif" style="bottom: 30px; left: ${$("#ship").css("left")};">`
+  $("#ship").remove()
   $("#view").append(explosion)
   setInterval( () => { $("#view").children().remove() } , 250)
   setInterval(() => { $("#view").css('background-image', 'url(./images/vader.jpg)') }, 200)
