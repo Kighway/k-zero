@@ -14,6 +14,8 @@ function endGame() {
   $("#view").append(explosion)
   setInterval( () => { $("#view").children().remove() } , 250)
   setInterval(() => { $("#view").css('background-image', 'url(./images/vader.jpg)') }, 200)
+  $("audio")[2].play()
+  $("audio")[1].play()
 }
 
 function graphOneSine () {
