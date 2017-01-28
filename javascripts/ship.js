@@ -30,3 +30,7 @@ function moveShip () {
     }
   }
 }
+
+function shipPositionToInteger(position) {
+  return parseInt(position.split('px')[0]) || 0
+}
