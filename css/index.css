@@ -6,9 +6,9 @@
 }
 
 body {
-    background-image: url("../images/endor-background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url("../images/endor-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center center;
 }
 
@@ -58,6 +58,7 @@ img {
   position: relative;
   text-decoration: none;
   top: 4rem;
+}
 
 div#blank.column-left {
   float: left;
