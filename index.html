@@ -4,21 +4,29 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   </head>
-
   <body>
-    <div class="columns">
-      <div id="blank"></div>
-      <div id="view">
-        <a id="starwars" href="javascript:start()">STAR WARS</a>
-        <img id="ship" src="images/x-wing-tiny.jpg" style="bottom: 30px; left: 180px;">
+
+    <div class="container">
+      <div class="column-left" id="blank">.</div>
+
+      <div class="column-center">
+        <div id="view">
+          <a id="starwars" href="javascript:start()">STAR WARS</a>
+          <img id="ship" src="images/x-wing-tiny.jpg" style="bottom: 30px; left: 180px;">
+        </div>
       </div>
-      <div id="timer"></div>
+
+      <div class="column-right" id="timer"></div>
     </div>
+
+
     <div class="clear"></div>
+
 
     <script src="javascripts/sine.js"></script>
     <script src="javascripts/wormhole.js"></script>
     <script src="javascripts/ship.js"></script>
     <script src="javascripts/timer.js"></script>
+
   </body>
 </html>

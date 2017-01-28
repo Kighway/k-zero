@@ -44,11 +44,12 @@ img {
   position: absolute;
 }
 
-
 #timer {
   text-align: center;
   color: yellow;
-  background-color: black;
+  height: 100px;
+  width: 100px;
+  font-size: 100px;
   z-index: 2;
 }
 
@@ -58,5 +59,19 @@ img {
   position: relative;
   text-decoration: none;
   top: 4rem;
+}
 
+div#blank.column-left {
+  float: left;
+  width: 33%;
+}
+
+div#timer.column-right {
+  float: right;
+  width: 33%;
+}
+
+div.column-center {
+  display: inline-block;
+  width: 33%;
 }
