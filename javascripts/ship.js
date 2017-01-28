@@ -22,11 +22,9 @@ function moveShip () {
       ship.style.left = `${left - 2}px`
     }
   }
-
   function turnRight() {
     var leftNumbers = ship.style.left.replace('px', '')
     var left = parseInt(leftNumbers)
-
     if (left < 330) {
       ship.style.left = `${left + 2}px`
     }
@@ -36,8 +34,8 @@ function moveShip () {
 function start() {
   document.addEventListener('keydown', moveShip)
   $("#starwars").remove()
-
   moveShip()
   graphSine = setInterval(graphOneSine, 0.0001)
   counter = setInterval(timer, 1000)
+  $("audio")[0].play()
 }
