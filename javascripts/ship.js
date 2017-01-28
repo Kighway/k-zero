@@ -118,4 +118,6 @@ function start() {
 
   counter = setInterval(timer, 1000)
 
+  $("audio")[0].play()
+
 }
