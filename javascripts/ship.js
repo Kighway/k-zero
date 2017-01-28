@@ -1,7 +1,3 @@
-const YAXIS = 750
-const SHIP = document.getElementById('ship')
-const VIEW = document.getElementById('view')
-
 function moveShip () {
   document.addEventListener('keydown', function(event) {
     if (event.which === 37) {
