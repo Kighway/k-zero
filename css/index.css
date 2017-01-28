@@ -1,8 +1,7 @@
 #ship {
-  background-color: black;
   height: 80px;
-  position: absolute;
   width: 68px;
+  position: absolute;
   z-index: 1;
 }
 
