@@ -2,9 +2,11 @@ function start() {
   document.addEventListener('keydown', moveShip)
   $("#starwars").remove()
   moveShip()
-  graphSine = setInterval(graphOneSine, 0.0001)
-  counter = setInterval(timer, 1000)
+  graphSine = setInterval(graphOneSine, 44)
   $("audio")[0].play()
+  counter = setInterval(timer, 1000)
+  setTimeout( () => {$("#timer").css("font-size", "100px")}, 1000)
+
 }
 
 function endGame() {
@@ -13,8 +15,8 @@ function endGame() {
   var explosion = `<img id="explosion" src="images/explosion.gif" style="bottom: 30px; left: ${$("#ship").css("left")};">`
   $("#ship").remove()
   $("#view").append(explosion)
-  setInterval( () => { $("#view").children().remove() } , 250)
-  setInterval(() => { $("#view").css('background-image', 'url(./images/vader.jpg)') }, 200)
-  $("audio")[2].play()
+  setTimeout( () => { $("#view").children().remove() } , 250)
+  setTimeout(() => { $("#view").css('background-image', 'url(./images/vader.jpg)') }, 200)
   $("audio")[1].play()
+  $("audio")[2].play()
 }

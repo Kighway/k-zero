@@ -15,14 +15,14 @@ function moveShip () {
     var leftNumbers = ship.style.left.replace('px', '')
     var left = parseInt(leftNumbers)
     if (left > 0) {
-      ship.style.left = `${left - 2}px`
+      ship.style.left = `${left - 1}px`
     }
   }
   function turnRight() {
     var leftNumbers = ship.style.left.replace('px', '')
     var left = parseInt(leftNumbers)
     if (left < 330) {
-      ship.style.left = `${left + 2}px`
+      ship.style.left = `${left + 1}px`
     }
   }
 }

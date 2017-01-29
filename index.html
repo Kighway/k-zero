@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Star Wars: Hyperspace Race</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="javascripts/players.js"></script>
+    <script src="javascripts/sine.js"></script>
+    <script src="javascripts/ship.js"></script>
+    <script src="javascripts/wormhole.js"></script>
+    <script src="javascripts/timer.js"></script>
+    <script src="javascripts/index.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="column-left" id="blank">.</div>
+      <div id="console" class="column-left">
+        <div id="timer">
+          Choose A Ship:
+        </div>
+        <div id="ship-choice">
+          <p>Millenium Falcon<p>
+          <img src="images/millenium-falcon-description.jpg">
+        </div>
+        <div id="ship-choice">
+          <p>X-Wing</p>
+          <img src="images/x-wing-description.jpg">
+        </div>
+      </div>
+
       <div class="column-center">
         <div id="view">
-          <a id="starwars" href="javascript:start()">STAR WARS</a>
+          <a id="starwars" href="javascript:start()">START WARS</a>
           <img id="ship" src="images/x-wing-tiny.jpg" style="bottom: 30px; left: 180px;">
           <audio loop src="audio/star-wars-intro-clip.mp3" type="audio/mpeg"></audio>
         </div>
         <audio src="audio/dark-side.mp3" type="audio/mpeg"></audio>
         <audio src="audio/imperial-march-clip.mp3" type="audio/mpeg"></audio>
       </div>
-      <div class="column-right" id="timer"></div>
-    </div>
+
+      <div class="column-right" id="blank">
+      </div>
+
+
     <div class="clear"></div>
-    <script src="javascripts/sine.js"></script>
-    <script src="javascripts/ship.js"></script>
-    <script src="javascripts/wormhole.js"></script>
-    <script src="javascripts/timer.js"></script>
-    <script src="javascripts/index.js"></script>
   </body>
 </html>
