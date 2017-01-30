@@ -14,7 +14,7 @@ function start() {
   document.addEventListener('keydown', moveShip)
   $("#starwars").remove()
   moveShip()
-  graphSine = setInterval(graphOneSine, 44)
+  graphSine = setInterval(graphOneSine, 40)
   counter = setInterval(timer, 1000)
   setTimeout( () => {$("#timer").css("font-size", "100px")}, 1000)
   $("audio")[0].pause()
