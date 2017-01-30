@@ -19,6 +19,7 @@
   width: 68px;
   position: absolute;
   z-index: 1;
+  opacity: 0;
 }
 
 body {
