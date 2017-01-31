@@ -28,7 +28,7 @@ function breachWormhole(wormhole) {
   {
          currentBreach = (new Date()).getTime()
          breachInterval = currentBreach - lastBreach
-        if (breachInterval > 20)
+        if (breachInterval > 30)
         {
           return true
         }
